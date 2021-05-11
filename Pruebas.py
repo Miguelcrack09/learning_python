@@ -25,3 +25,8 @@ b = ['2.36', 'elefante', 1010, 'rojo']
 print(b)
 catorce = b[0:3:2]
 print(catorce)
+
+""" viva el mundo actual """
+
+
+"""prueba de git"""
