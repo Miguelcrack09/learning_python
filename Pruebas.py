@@ -41,9 +41,9 @@ elif nota <= 10:
 else: 
     print("Lo sentimos, pero la nota ingresada no es valida")"""
 
-primero = int(input("Digite su primer numero a revisar:"))
-segundo = int(input("Digite su segundo numero a revisar:"))
-tercero = int(input("Digite su tercer numero a revisar:"))
+primero = float(input("Digite su primer numero a revisar:"))
+segundo = float(input("Digite su segundo numero a revisar:"))
+tercero = float(input("Digite su tercer numero a revisar:"))
 
 if primero > segundo and primero > tercero:
     print ("El numero mayor es: ",primero)
