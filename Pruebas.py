@@ -40,7 +40,7 @@ elif nota <= 10:
     print ("Felicitades",nombre,"su estado es: SOBRESALIENTE")
 else: 
     print("Lo sentimos, pero la nota ingresada no es valida")"""
-
+"""
 primero = float(input("Digite su primer numero a revisar:"))
 segundo = float(input("Digite su segundo numero a revisar:"))
 tercero = float(input("Digite su tercer numero a revisar:"))
@@ -54,3 +54,6 @@ elif tercero > primero and tercero > segundo:
 else:
     print ("Lo sentimos no hemos podido identificar cual es el numero mayor")
 
+"""
+
+"""confirmar estado de python"""
