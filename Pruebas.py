@@ -53,11 +53,3 @@ elif tercero > primero and tercero > segundo:
     print ("El numero mayor es: ",tercero)
 else:
     print ("Lo sentimos no hemos podido identificar cual es el numero mayor")
-
-"""
-
-"""confirmar estado de python"""
-
-""" pythones una mierda"""
-
-"""gabito hermanito te quiero muchito"""
