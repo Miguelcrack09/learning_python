@@ -57,3 +57,7 @@ else:
 """
 
 """confirmar estado de python"""
+
+""" pythones una mierda"""
+
+"""gabito hermanito te quiero muchito"""
