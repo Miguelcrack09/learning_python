@@ -1,4 +1,4 @@
-uno = 19;dos = 25;tres = 62;cuatro=52
+"""uno = 19;dos = 25;tres = 62;cuatro=52
 suma = uno+dos+tres+cuatro
 print ("Hola, la suma es",suma)
 promedio = suma / 4
@@ -26,7 +26,31 @@ print(b)
 catorce = b[0:3:2]
 print(catorce)
 
-""" viva el mundo actual """
 
+nombre = input("Nombre del estudiante: ")
+nota = float(input("cual es la nota del estudiante: "))
 
-"""prueba de git"""
+if nota > 0 and nota < 5:
+    print("Lo sentimos ",nombre,"tu estado es: SUSPENDIDO")
+elif nota < 7:
+    print("Felicidades", nombre,"tu estado es: APROBADO - Sigue mejorando")
+elif nota <9:
+    print ("Felicitades",nombre,"su estado es: Notable")
+elif nota <= 10:
+    print ("Felicitades",nombre,"su estado es: SOBRESALIENTE")
+else: 
+    print("Lo sentimos, pero la nota ingresada no es valida")"""
+
+primero = int(input("Digite su primer numero a revisar:"))
+segundo = int(input("Digite su segundo numero a revisar:"))
+tercero = int(input("Digite su tercer numero a revisar:"))
+
+if primero > segundo and primero > tercero:
+    print ("El numero mayor es: ",primero)
+elif segundo > primero and segundo > tercero:
+    print ("El numero mayor es: ", segundo)
+elif tercero > primero and tercero > segundo:
+    print ("El numero mayor es: ",tercero)
+else:
+    print ("Lo sentimos no hemos podido identificar cual es el numero mayor")
+
