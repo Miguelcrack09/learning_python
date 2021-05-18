@@ -153,7 +153,7 @@ else:
 """ Codigo mio"""
 
 #falta descubrir como llamar la informacion de \t, para que no aparezca solo el numero
-
+"""
 print ("Bienvenidos a la pizzeria Bella Napoli.")
 print("\nTipos de pizza\n\t1- Vegetariana\n\t2- No vegetariana\n")
 tipo = input("Introduce el número correspondiente al tipo de pizza que quieres: \n")
@@ -191,3 +191,162 @@ else:
         print("jamón")
     else:
         print("salmón")
+"""
+
+"""Ejercicios de refuerzo"""
+#Primero
+"""
+numero = int(input("Digite un numero entero:\n"))
+result = abs(numero)
+if numero > 0:
+    print("El numero ",numero," es positivo.\nCuyo valor absoluto es:",result)
+else:
+    print("El numero", numero, "es negativo.\nCuyo valor absoluto es:",result)
+"""
+
+#segundo
+"""
+print("Digite cuatro numeros a comparar:")
+primero = float(input("-"));segundo = float(input("-"));tercero = float(input("-"));cuarto = float(input("-"))
+if primero < segundo and primero < tercero and primero < cuarto:
+    print("El numero menor es:",primero)
+elif segundo < tercero and segundo < cuarto:
+    print("El numero menor es:",segundo)
+elif tercero < cuarto:
+    print("El numero menor es:",tercero)
+else:
+    print("El numero menor es:",cuarto)
+"""
+
+#tercero
+"""
+año = int(input("Digite el año que desea revizar:\n"))
+if año%4==0 and año%100!=0:
+    print("El año digitado es bisiesto")
+else:
+    print("El año digitado no es bisiesto")
+"""
+
+#cuarto
+"""
+dia = str(input("Digite la letra inicial del dia.\n"))
+if dia.lower() == "s":
+    print("El día es:\nSabado")
+elif dia.lower() == "d":
+    print("El día es:\nDomingo")
+elif dia.lower() == "l":
+    print("El día es:\nLunes")
+elif dia.lower() == "m":
+    print("El día es:\nMartes")
+elif dia.lower() == "x":
+    print("El día es:\nMiercoles")
+elif dia.lower() == "j":
+    print("El día es:\nJueves")
+elif dia.lower() == "v":
+    print("El día es:\nViernes")
+else:
+    print("No se reconoce la letra ingresada, intentalo nuevamente")
+"""
+
+#QUINTO
+"""
+salario = int(input("¿Cuanto gana al mes?\n"))
+
+if salario < 1000000:
+    print(salario + 175000)
+else:
+    print(salario-(salario*0.05))
+
+
+pregunta = input("¡Realizo horas extra?\n\t1- SI\n\t2- NO")
+
+if pregunta == 1 or pregunta.lower() == "si":
+    horas = input("¿Cuantas horas trabajo.?\n")
+
+else:
+    
+"""
+
+#condicionales iterativos
+#variables de control
+#primer ejemplo
+
+suma_realizada = False
+total = 0
+a = 5
+b = 10
+if suma_realizada == False:
+    total = a + b
+    suma_realizada = True
+
+if suma_realizada == True:
+    print("Se ha realizado una suma y su valor es: " + str(total))
+
+
+#segundo ejemplo
+
+contagio_validado = "No"
+paciente = "Lisa"
+
+if contagio_validado == "No":
+    print("La paciente" + paciente +"aun no se ha realizado su prueba para validar si se encuentra contagiada, se recomienda aplicar la prueba PCR")
+    print("Aplicando prueba...")
+    contagio_validado = "Pendiente"
+
+if contagio_validado == "Pendiente":
+    print(paciente + ", por favor valide en su correo el resultado de la prueba")
+    contagio_validado = "Si"
+if contagio_validado == "Si":
+    print(paciente + ", de acuerdo a su resultado, por favor mantengase alejado de las personas")
+
+#acumuladores
+#primer ejemplo
+
+lista_compras = " "
+print("La abuelita esta escribiendo la lista de compras...")
+lista_compras = lista_compras+"5 manzanas"
+print("---Lista de compras---")
+print(lista_compras)
+lista_compras = lista_compras+", 3 lb cilantro"
+print("---Lista de compras---")
+print(lista_compras)
+lista_compras = lista_compras+", 3 lb perejil"
+print("---Lista de compras---")
+print(lista_compras)
+
+
+precio_manzana = 1200
+cant_manzanas = 5
+precio_cilantro = 200
+cant_cilantro = 3
+precio_perejil = 300
+cant_perejil = 3
+subtotal = 0
+print ("Calculando el total de tu mercado...")
+total_manzana = precio_manzana*cant_manzanas
+print ("El valor total de las manzanas es: $"+str(total_manzana))
+subtotal = subtotal + total_manzana
+print("...El subtotal seria: $"+str(subtotal))
+total_cilantro = precio_cilantro*cant_cilantro
+print ("El valor total del cilantro es: $"+str(total_cilantro))
+subtotal = subtotal + total_cilantro
+print("...El subtotal seria: $"+str(subtotal))
+total_perejil = precio_perejil*cant_perejil
+print ("El valor total del perejil es: $"+str(total_perejil))
+subtotal = subtotal + total_perejil
+print("...El subtotal seria: $"+str(subtotal))
+
+#contadores
+
+cont_manzanas = 0
+print("Se ha iniciado el carrito. En total hay: "+ str(cont_manzanas) + "manzanas.")
+cont_manzanas = cont_manzanas + 1
+print("Se ha agregado una manzana a la canasta. ahora hay " + str(cont_manzanas) + " manzanas.")
+cont_manzanas = cont_manzanas + 1
+print("Se ha agregado una manzana a la canasta. ahora hay " + str(cont_manzanas) + " manzanas.")
+cont_manzanas = cont_manzanas + 1
+print("Se ha agregado una manzana a la canasta. ahora hay " + str(cont_manzanas) + " manzanas.")
+cont_manzanas = cont_manzanas + 1
+print("Se ha agregado una manzana a la canasta. ahora hay " + str(cont_manzanas) + " manzanas.")
+cont_manzanas = cont_manzanas + 1
+print("Se ha agregado una manzana a la canasta. ahora hay " + str(cont_manzanas) + " manzanas.")
