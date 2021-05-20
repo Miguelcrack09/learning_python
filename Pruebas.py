@@ -266,7 +266,7 @@ if pregunta == 1 or pregunta.lower() == "si":
 else:
     
 """
-
+"""
 #condicionales iterativos
 #variables de control
 #primer ejemplo
@@ -350,3 +350,91 @@ cont_manzanas = cont_manzanas + 1
 print("Se ha agregado una manzana a la canasta. ahora hay " + str(cont_manzanas) + " manzanas.")
 cont_manzanas = cont_manzanas + 1
 print("Se ha agregado una manzana a la canasta. ahora hay " + str(cont_manzanas) + " manzanas.")
+
+"""
+
+#while
+"""
+i = 1
+while i <=5:
+    print(i)
+    i=i+1
+
+#segundo ejemplo
+
+manzanas = 5
+cont_manzanas = 0
+
+print("Se ha iniciado el carrito. En total hay " + str(cont_manzanas) + " manzanas.")
+
+while cont_manzanas < manzanas:
+    cont_manzanas = cont_manzanas + 1
+    print("Se ha agregado una manzana a la canasta. Ahora hay " + str(cont_manzanas) + " manzanas")
+"""
+#for
+"""
+for i in range(3):
+    print(i)
+
+#segundo ejemplo
+
+print("Se ha iniciado el carrito. En total hay: 0 manzanas.")
+
+for i in range(1, 6):
+    print("Se ha agregado una manzana a la canasta. Ahora hay " + str(i) + " manzanas")
+"""
+
+#Ejercicios
+#primero
+"""
+n = int(input("Digite un número natural\n"))
+suma = 0
+for x in  range (1, n+1):
+    suma = suma + x
+
+print(suma)
+"""
+#segundo
+"""
+n = int(input("Digite un numero:\n"))
+
+for i in range (1, 11):
+    mul = n * i
+    print(n, " * ", i ," = ", mul)
+"""
+#tercero
+"""
+numero = int(input("Digite un numero a revisar:\n"))
+contador = 0
+verificar=False
+if numero >= 2:
+    for i in range(1, numero+1):
+        if numero%i==0:
+            contador=contador + 1
+        elif contador >= 3:
+            verificar=True
+       
+    if contador == 2 and verificar == False:
+        print("El numero", numero, "es primo")
+    else:
+        print("El numero", numero, "no es primo")    
+else:
+    print("El numero 1 no es considerado un numero primo")
+"""
+#cuarto
+"""
+i = 1
+cont_par=0
+cont_impar=0
+while i<=10:
+    i = i + 1
+    cont_numero = int(input("Digite un numero:\n")) 
+    if cont_numero % 2 == 0:
+        print("El número", cont_numero," es par\n")
+        cont_par=cont_par+1
+    else:
+        print("El número", cont_numero," no es par\n")
+        cont_impar=cont_impar+1
+print("En total selecciono", cont_par, "números pares")
+print("En total selecciono", cont_impar, "números impares")
+"""
