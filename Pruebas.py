@@ -438,3 +438,343 @@ while i<=10:
 print("En total selecciono", cont_par, "números pares")
 print("En total selecciono", cont_impar, "números impares")
 """
+
+#Reto 3
+"""
+usuario = "admin"
+contraseña = "MisionTic2021"
+intento = 1
+opcion = 5
+empleados = str([ ])
+lis_empleado = str( )
+visitantes = str([])
+lis_visitantes = str( )
+while opcion > 0 and intento <= 3:
+    usu = str(input( ))
+    con = str(input( ))
+    if usu == usuario and con == contraseña:
+        print ("Usuario: "+usu)
+        print ("Contraseña: "+con+"")
+        while opcion != 0:
+                print("\n------Menú de registro de personal-----\n1. Registrar ingreso de empleado.\n2. Ver empleados ingresados.\n3. Registrar ingreso de visitantes.\n4. Ver visitantes ingresados.\n\n0. Salir\n")
+                opcion = int(input("Ingresa un número válido de opción del menú: "))
+                if opcion == 1:
+                    while empleados != "SALIR":
+                        empleados = input("Ingresa el nombre del empleado (Si no desea agregar más, oprime la tecla SALIR): ")
+                        if empleados != "SALIR":
+                            lis_empleado=lis_empleado+empleados+","
+                elif opcion == 2:
+                       print("Los empleados registrados son: " + lis_empleado + "\n") 
+                elif opcion == 3:
+                    while visitantes != "SALIR":
+                        visitantes = input("Ingresa el nombre del visitante (Si no desea agregar más, oprime la tecla SALIR): ")
+                        if visitantes != "SALIR":
+                            lis_visitantes=lis_visitantes+visitantes+","  
+                elif opcion == 4:
+                    print("Los visitantes registrados son: " + lis_visitantes + "\n")                
+                elif opcion == 0:
+                    print("¡Hasta luego!")          
+    else:
+        intento = intento + 1
+        print("(Error en las credenciales)")
+    if intento > 3:
+        print ("Lo sentimos ya alcanzo el limite de tres intentos")
+"""
+
+#Ejercicios de acumuladores
+
+#Primero
+
+"""
+acumulador = 0
+for i in range (1, 1000):
+    i = int(input("Ingrese número: "))
+    if i > 0:
+        acumulador=acumulador+i
+    else:
+        break
+print ("La suma es: ", acumulador)
+"""
+
+#Segundo
+
+"""
+acumulador=0
+numero = 1
+while  numero != 0:
+    numero = int(input("Ingrese un numero: "))
+    acumulador = acumulador+numero
+print("La suma es: ", acumulador)      
+"""
+
+#Interes mio
+
+"""
+veces = int(0)
+numero = int(input("Numero de veces que desea doblar: "))
+dato = int(input("Cual es el dato inical que desea aumentar: "))
+while veces <= numero:
+    dato = dato * 2
+    veces = veces + 1
+    print (veces," = ",dato)
+"""  
+#67108864
+#18.446.744.073.709.551.616
+
+#Clase
+
+"""
+def kms_to_ms(velocity_kms):
+    kilometer_in_meter = 1000
+    seconds_in_hour = 3600
+    return velocity_kms * kilometer_in_meter / seconds_in_hour
+print(kms_to_ms(50))
+
+
+def factorial (n):
+    if n == 1:
+        return n
+    elif n < 1:
+        return (" No existe")
+    else:
+        return n *factorial (n-1)
+a=int(input("Digite un número: "))
+
+res = factorial(a)
+print (a," != ", res)
+
+num_mayor = 0
+num_menor = 0
+for i in range(0 ,6):
+    numero = int(input("Ingrese un numero:"))
+    i = i + 1
+    if numero > num_mayor:
+        num_mayor = numero
+        num_menor = numero
+    elif numero < num_menor:
+        num_menor = numero
+print (num_mayor)
+print (num_menor)    
+"""
+
+#Ejercicios para contadores: 
+# 1. Cuenta los pares que existen entre dos números ingresados por el usuario. 
+"""
+numero_pri=int(input("Dijite el primer numero a revizar: "))
+numero_seg=int(input("Digite el segundo número que desea revizar: "))
+i = numero_pri
+contador = 0
+for i in range(numero_pri,(numero_seg-1)):
+    i = i + 1
+    num_par = i % 2
+    if num_par == 0:
+        contador = contador + 1
+print ("Hay",contador,"números pares entre",numero_pri,"y",numero_seg)
+"""
+# 2.Cuenta la cantidad de estudiantes que aprobaron la materia con un valor mayor a 3.5 de 20 datos ingresados
+"""
+contador = 0
+no_paso = 0
+for i in range (1,20):
+    nota = float(input("Digite la nota del estudiante:"))
+    if nota >= 3.5 and nota <=5.0:
+        contador = contador + 1
+    elif nota < 3.5 and nota > 0:
+        no_paso = no_paso + 1
+    else:
+        print("La nota ingresada no corresponde")
+
+print ("La cantidad de estudiantes aprovados es:", contador)
+"""
+#Ejercicios para acumuladores: 
+# 1.Programa en Python que suma los pares que existen entre dos números ingresados por el usuario. 
+"""
+numero_pri=int(input("Dijite el primer numero a revizar: "))
+numero_seg=int(input("Digite el segundo número que desea revizar: "))
+i = numero_pri
+acumulador= 0
+for i in range(numero_pri,(numero_seg-1)):
+    i = i + 1
+    num_par = i % 2
+    if num_par == 0:
+        acumulador = acumulador + i
+print ("La suma de los números pares entre",numero_pri,"y",numero_seg,"es:",acumulador)
+"""
+# 2. Sumar las notas obtenidas en un curso por un alumno para después determinar su promedio
+#  y si es menor a 3.5 mostrar un mensaje que diga “Reprobó”
+"""
+veces = int(input("Cuantas notas tiene el estudiante?: "))
+notas = 0
+for i in range (veces+1):
+    nota = float(input("Digite las notas del estudiante:"))
+    notas = notas + nota
+    i = i + 1
+    if i == veces:
+        promedio = notas / veces
+        if promedio <= 3.5:
+            print("Reprobó", promedio)
+"""
+#Ejercicio para bandera: Programa en Python que calcula suma de los primeros 10 números pares 
+# y el producto de los primeros 10 números impares simultáneamente.
+"""
+bandera = True
+contador = 0
+suma_impar = 0
+prod_par =1
+while bandera == True:
+    contador = contador + 1
+    par = contador%2
+    if par != 0:
+        suma_impar = suma_impar + contador
+    elif par == 0:
+        prod_par = prod_par * contador    
+    elif contador == 22:
+        bandera = False
+print (suma_impar)
+print (prod_par)
+"""
+
+#Reto 3 para coderunner
+
+"""
+usuario = "admin"
+contraseña = "MisionTic2021"
+lis_empleado = str( )
+lis_visitantes = str( )
+intento = 0
+opcion = 10
+while opcion > 0 and intento <= 3:
+    usu = str(input( ))
+    con = str(input( ))
+    if usu == usuario and con == contraseña:
+        print ("Usuario: "+usu)
+        print ("Contraseña: "+con)
+        while opcion != 0:
+                print("\n------Menú de registro de personal-----\n1. Registrar ingreso de empleado.\n2. Ver empleados ingresados.\n3. Registrar ingreso de visitantes.\n4. Ver visitantes ingresados.\n\n0. Salir\n")
+                opcion = int(input())
+                print("Ingresa un número válido de opción del menú:",opcion)
+                if opcion >= 0 and opcion <=4:
+                    empleados = str([ ])
+                    visitantes = str([])
+                    if opcion == 1:
+                        while empleados != "SALIR":
+                            empleados = input()
+                            print("Ingresa el nombre del empleado (Si no deseas agregar más, oprime la tecla SALIR):", empleados)
+                            if empleados != "SALIR":
+                                lis_empleado=lis_empleado+empleados+","
+                    elif opcion == 2:
+                           print("Los empleados registrados son: " + lis_empleado) 
+                    elif opcion == 3:
+                        while visitantes != "SALIR":
+                            visitantes = input()
+                            print("Ingresa el nombre del visitante (Si no deseas agregar más, digite SALIR):",visitantes)
+                            if visitantes != "SALIR":
+                                lis_visitantes=lis_visitantes+visitantes+","  
+                    elif opcion == 4:
+                        print("Los visitantes registrados son: " + lis_visitantes)       
+                    elif opcion == 0:
+                        print("¡Hasta luego!")         
+                else:
+                    print("Por favor ingresa una opción válida")
+    else:
+        intento = intento + 1
+        print ("Usuario: "+usu)
+        print ("Contraseña: "+con)
+        print("Credenciales incorrectas")
+    if intento > 3:
+        print ("Has agotado la cantidad de intentos, por favor inicie de nuevo el programa")
+
+"""
+
+#reto 4 
+
+"""
+import random
+lista=[]
+for i in range(500):
+    a= random.uniform(30,80)
+    lista.append(a)
+
+
+list = []
+def calcular_badejas(int,str):
+        if str == "BC" or str == "A":
+            bandejas=int/30
+        elif str == "AA":
+            bandejas=int/24
+        elif str == "AAA":
+            bandejas=int/12
+        return bandejas
+
+
+def clasificacion_huevos(list):
+        conC=0
+        conB=0
+        conA=0
+        conAA=0
+        conAAA=0
+        can=len(list)
+        for i in range(can):
+            if list[i]<46:
+                conC=conC+1
+            elif list[i]<53:
+                conB=conB+1
+            elif list[i]<60:
+                conA=conA+1
+            elif list[i]<67:
+                conAA=conAA+1
+            elif list[i]>=67:
+                conAAA=conAAA+1
+        bandeja_bc= int(calcular_badejas(conC+conB,"BC"))
+        bandeja_a= int(calcular_badejas(conA,"A"))
+        bandeja_aa= int(calcular_badejas(conAA,"AA"))
+        bandeja_aaa= int(calcular_badejas(conAAA,"AAA"))
+        datos = ("Tipo_huevos: A, numero_huevos: "+str(conA)+", numero_bandejas: "+str(bandeja_a)+"\nTipo_huevos: AA, numero_huevos: "+str(conAA)+", numero_bandejas: "+str(bandeja_aa)+"\nTipo_huevos: AAA, numero_huevos: "+str(conAAA)+", numero_bandejas: "+str(bandeja_aaa)+"\nTipo_huevos: BC, numero_huevos: "+str(conB+conC)+", numero_bandejas: "+str(bandeja_bc))
+        return datos
+"""
+
+#return print("Tipo_huevos:A, numero_huevos: "+str(new_lista[2])+", numero_bandejas:",bandejaA,"\nTipo_huevos:AA, numero_huevos: "+str(new_lista[3])+", numero_bandejas:",bandejaAA,"\nTipo_huevos:AAA, numero_huevos: "+str(new_lista[4])+", numero_bandejas:",bandejaAAA,"\nTipo_huevos:BC, numero_huevos: "+str(suma)+", numero_bandejas:",bandejabc)
+#Tipo_huevos:A, numero_huevos:",new_lista[0],", numero_bandejas:",bandejaA    
+
+
+
+#calcular_bandejas
+#todo el primer dato y le sumo el segundo
+#al resultado lo divido en 30 y tomo la parte entera
+#Para obterner las bandejas de la cadegoria A divido el dato almacenado en la casilla 2 de la lista new_lista en 30
+
+
+#Función un elemento guardado
+
+"""
+multiplicacion = 0
+def ejemplo (multiplicacion):  
+    if numero > 10: 
+        return numero*22
+    elif numero <= 10:
+        return numero / 6
+print("funciono")        
+
+
+for i in range(1,5):
+    i+=1
+    numero = int(input("Digite un valor: "))
+    print (ejemplo(multiplicacion))
+"""
+
+#Ejemplos de lista y tuplas
+
+"""
+objetos = ["Celular","Vehiculos","Escritorio"]
+numeros = [2,22,333,4444,55555]
+elementos = ("Apartamento","Ascender","Bateria","Libro","Alfombra")
+numero = (1,2,3,4,55)
+
+print("Lista: ")
+for i in range(3):
+    print (objetos[i])
+
+print ("Tupla: ")
+for i in range (5):
+    print (elementos[i])
+"""
