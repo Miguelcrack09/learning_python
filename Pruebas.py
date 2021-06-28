@@ -688,15 +688,9 @@ while opcion > 0 and intento <= 3:
 
 #reto 4 
 
+
+
 """
-import random
-lista=[]
-for i in range(500):
-    a= random.uniform(30,80)
-    lista.append(a)
-
-
-list = []
 def calcular_badejas(int,str):
         if str == "BC" or str == "A":
             bandejas=int/30
@@ -731,12 +725,18 @@ def clasificacion_huevos(list):
         bandeja_aaa= int(calcular_badejas(conAAA,"AAA"))
         datos = ("Tipo_huevos: A, numero_huevos: "+str(conA)+", numero_bandejas: "+str(bandeja_a)+"\nTipo_huevos: AA, numero_huevos: "+str(conAA)+", numero_bandejas: "+str(bandeja_aa)+"\nTipo_huevos: AAA, numero_huevos: "+str(conAAA)+", numero_bandejas: "+str(bandeja_aaa)+"\nTipo_huevos: BC, numero_huevos: "+str(conB+conC)+", numero_bandejas: "+str(bandeja_bc))
         return datos
-"""
+import random
+list=[]
+for i in range(500):
+    a= random.uniform(30,80)
+    list.append(a)
 
+print(list)
+print (clasificacion_huevos(list))
 #return print("Tipo_huevos:A, numero_huevos: "+str(new_lista[2])+", numero_bandejas:",bandejaA,"\nTipo_huevos:AA, numero_huevos: "+str(new_lista[3])+", numero_bandejas:",bandejaAA,"\nTipo_huevos:AAA, numero_huevos: "+str(new_lista[4])+", numero_bandejas:",bandejaAAA,"\nTipo_huevos:BC, numero_huevos: "+str(suma)+", numero_bandejas:",bandejabc)
 #Tipo_huevos:A, numero_huevos:",new_lista[0],", numero_bandejas:",bandejaA    
 
-
+"""
 
 #calcular_bandejas
 #todo el primer dato y le sumo el segundo
@@ -773,8 +773,137 @@ numero = (1,2,3,4,55)
 print("Lista: ")
 for i in range(3):
     print (objetos[i])
-
+  
 print ("Tupla: ")
 for i in range (5):
     print (elementos[i])
+
+
+A = {0,8,3,4,5}
+B = {1,2,6,0,8}
+
+print (A ^ B)
 """
+
+#Reto 5
+"""
+
+def calculadoraMes(ahorros,persona):
+    lista = ahorros.split(";")
+    lista1 = calculo(lista [0].split(","))
+    lista2 = calculo(lista [1].split(","))
+    lista3 = calculo(lista [2].split(","))
+    lista4 = calculo(lista [3].split(","))
+    diccionario = {"Enero":lista1,"Febrero":lista2,"Marzo":lista3,"Abril":lista4}
+    return persona,diccionario
+
+def calculo(meses):
+    suma = 0
+    if meses[0] == "Enero":
+        for i in range (1,len(meses)):
+            suma = suma + int(meses[i])
+    elif meses[0] == "Febrero":
+        for i in range (1,len(meses)):
+            suma = suma + int(meses[i])
+    elif meses[0] == "Marzo":
+        for i in range (1,len(meses)):
+            suma = suma + int(meses[i])
+    elif meses[0] == "Abril":
+        for i in range (1,len(meses)):
+            suma = suma + int(meses[i])
+    return suma
+print (calculadoraMes("Enero,4,3,4;Febrero,4,3;Marzo,4,3,4;Abril,4,3,4,4","daniel"))
+
+"""
+#Diccionarios
+
+"""
+diccionario ={"azul":"blue",
+"rojo":"red",
+"verde":"green",
+"indentacion":"Organización",
+"estadistica":"tablas",
+"matematicas":"Multiplicación"}
+
+# la estructura para agregar datos a un diccionario es: nombre[clave]=valor
+diccionario["One piece"]="Anime favorito"
+diccionario["Sakura"]="flor de cerezo"
+diccionario["estado"]="condicion actual"
+#.keys muestra solo las claves del diccionario
+print (diccionario.keys())
+#.values muestra solo los valores de las claves
+print (diccionario.values())
+#.items muestra toda la infromacion, separando cada clave y valor dentro de una tupla
+print (diccionario.items())
+"""
+
+#la estructura funcion = def nombre(parametros)
+
+"""
+def mate (num1,num2):
+    suma = num1 + num2 
+    return suma
+
+print (mate(1,2))
+"""
+def calcular_bandejas(A,AA,AAA,BC):
+    #aqui tienes que poner los valores en tipo integer(int) de manera que solo te arroge un dato entero, sin decimales
+    #que te quede asi por ejemplo:bandA=int(A/30), haces eso mismo con todos, y listo, solo le agregar el int
+    bandA=A/30
+    bandAA=AA/24
+    bandAAA=AAA/12
+    bandBC=BC/30
+    return bandA,bandAA,bandAAA,bandBC
+def clasificacion_huevos(lista):
+    contA=0
+    contAA=0
+    contAAA=0
+    contBC=0
+    for i in lista:
+        peso=i
+        if peso>=53 and peso<60:
+            contA=contA+1
+        elif peso>=60 and peso<67:
+            contAA+=1
+        elif peso>=67:
+            contAAA+=1
+        elif peso <53:
+            contBC+=1
+    print('A:',contA)
+    print('AA:',contAA)
+    print('AAA:',contAAA)
+    print('BC:',contBC)
+    #En la linea que tienes aqui abajo ya haces perfectamente el llamado de las variables, ignora lo que te envie por el chat
+    bandA,bandAA,bandAAA,bandBC = calcular_bandejas(contA,contAA,contAAA,contBC)
+    #desde aqui para abajo debes colocar todo en una variable
+    #aqui puedes ingresar al enunciado del reto y mirar la estructura de lo que debes imprimir, te guias por eso y los colocas 
+    #que te quede asi:variable ="Tipo_huevos:A, numero_huevos: "+contA+", numero_bandejas:",bandA lo repites con todos los datos contAA etc y los asi pones los de todos los huevos
+    print('Bandejas')
+    print('A:',bandA)
+    print('AA:',bandAA)
+    print('AAA:',bandAAA)
+    print('BC:',bandBC)
+    #una vez ya tengas todo en varibales
+    #usas el return, para poder devolver ese dato
+    #que te quede asi:retun "variable"
+    #y listo
+
+
+print(clasificacion_huevos([46.5,50,60,65,47,80,12,43,34,67,65,64,66,55,54,50.65, 60.8, 58.7, 70.0, 49.8]))        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
