@@ -846,6 +846,13 @@ def mate (num1,num2):
 
 print (mate(1,2))
 """
+import random
+lista=[]
+
+for f in range(100):
+    h=random.uniform(30,80)
+    lista.append(h)
+    
 def calcular_bandejas(A,AA,AAA,BC):
     #aqui tienes que poner los valores en tipo integer(int) de manera que solo te arroge un dato entero, sin decimales
     #que te quede asi por ejemplo:bandA=int(A/30), haces eso mismo con todos, y listo, solo le agregar el int
@@ -889,10 +896,11 @@ def clasificacion_huevos(lista):
     #y listo
 
 
-print(clasificacion_huevos([46.5,50,60,65,47,80,12,43,34,67,65,64,66,55,54,50.65, 60.8, 58.7, 70.0, 49.8]))        
+print(clasificacion_huevos([46.5,50,60,65,47,80,12,43,34,67,65,64,66,55,54,50.65, 60.8, 58.7, 70.0, 49.8]))
+print(lista)
+print(clasificacion_huevos(lista))
 
-
-#Hola Catalina, que bueno es trabajar contigo
+#Hola Catalina, que bueno es rabajar contigo
 
 
 
