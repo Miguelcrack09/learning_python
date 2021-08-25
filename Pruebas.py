@@ -892,7 +892,7 @@ def clasificacion_huevos(lista):
 print(clasificacion_huevos([46.5,50,60,65,47,80,12,43,34,67,65,64,66,55,54,50.65, 60.8, 58.7, 70.0, 49.8]))        
 
 
-#Hola Catalina, que bueno es rabajar contigo
+#Hola Catalina, que bueno es trabajar contigo
 
 
 
