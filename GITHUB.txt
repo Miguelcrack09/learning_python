@@ -1,0 +1,7 @@
+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
+
+vscode://vscode.github-authentication/did-authenticate?windowid=1&code=8941230fec935db0ece8&state=546a1010-5945-44e7-9956-8983e2433441
+
+
+
+vscode://vscode.github-authentication/did-authenticate?windowid=1&code=47f8f90693b1687ade8a&state=099d1cf7-8751-4e10-bd6a-b7e8094575e5

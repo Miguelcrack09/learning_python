@@ -891,8 +891,11 @@ def clasificacion_huevos(lista):
 
 print(clasificacion_huevos([46.5,50,60,65,47,80,12,43,34,67,65,64,66,55,54,50.65, 60.8, 58.7, 70.0, 49.8]))        
 
+#FIN DE LA CLASES EN PYTHON
 
 
+
+""""Prueba por interes"""
 
 
 
